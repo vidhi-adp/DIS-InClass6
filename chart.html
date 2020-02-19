@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Line Chart Test</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+  <script language="JavaScript"><!--
+  function displayLineChart() {
+    var data = {
+        labels: ['DAY 1', 'DAY 2', 'DAY 3', 'DAY 4', 'DAY 5', 'DAY 6', 'DAY 7', 'DAY 8', 'DAY 9', 'DAY 10'],
+        datasets: [
+            {
+				label: "highest temperature in last 10 days",
+                fillColor: "rgba(220,220,220,0.8)",
+                strokeColor: "rgba(157,238,238,1)",
+                pointColor: "rgba(220,220,220,1)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: [72, 79, 82, 82, 84, 81, 79, 81, 82, 82]
+            },
+            {
+                label: "Lowest temperature in last 10 days",
+                fillColor: "rgba(151,187,205,0.2)",
+                strokeColor: "rgba(151,187,205,1)",
+                pointColor: "rgba(151,187,205,1)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(151,187,205,1)",
+                data: [68, 73,77,77,77,79,72,75,73,68]
+            }
+        ]
+    };
+    var ctx = document.getElementById("lineChart").getContext("2d");
+    var options = { };
+    var lineChart = new Chart(ctx).Line(data, options);
+  }
+  --></script>
+</head>
+<body onload="displayLineChart();">
+  <div class="box">
+    <canvas id="lineChart" height="450" width="800"></canvas>
+  </div>
+</body>
+</html>
